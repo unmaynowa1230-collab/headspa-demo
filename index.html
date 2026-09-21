@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>艶 tsuya ｜ ヘッドスパ・髪質改善専門</title>
+<meta name="description" content="名古屋・栄のヘッドスパ・髪質改善専門サロン 艶。カットもカラーもしません。戻すことだけを。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --w:#F8F8F3;--sage:#DCE4D5;--moss:#5F7358;--wood:#8D7048;--ink:#2E2F2A;--mute:#8A8C80;--line:#DADCD2;
+  --min:'Zen Old Mincho',serif;--jp:'Zen Kaku Gothic New',sans-serif;--en:'Cormorant Garamond',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--jp);font-weight:300;color:var(--ink);background:var(--w);line-height:2;font-size:14px;letter-spacing:.04em;-webkit-font-smoothing:antialiased;position:relative}
+/* 緑のにじみ */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(50% 40% at 85% 10%,rgba(220,228,213,.9) 0,rgba(220,228,213,0) 70%),
+             radial-gradient(40% 50% at 10% 90%,rgba(220,228,213,.7) 0,rgba(220,228,213,0) 70%)}
+a{color:inherit;text-decoration:none}
+.en{font-family:var(--en);font-style:italic;font-weight:300;letter-spacing:.12em}
+.vt{writing-mode:vertical-rl;letter-spacing:.5em}
+.in{max-width:1200px;margin:0 auto;padding:0 40px;position:relative;z-index:2}
+
+nav{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:28px 40px;mix-blend-mode:difference;color:#fff}
+nav .logo{font-family:var(--min);font-size:26px;letter-spacing:.2em;font-weight:500}
+nav .logo i{font-family:var(--en);font-style:italic;font-weight:300;font-size:15px;margin-left:10px;letter-spacing:.14em}
+nav ul{display:flex;gap:36px;list-style:none;font-size:12px;letter-spacing:.24em}
+nav .r{font-size:12px;letter-spacing:.3em;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+/* hero */
+.hero{position:relative;height:100vh;min-height:680px;overflow:hidden;background:#000}
+.hero .ph{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?auto=format&fit=crop&w=2400&q=80') center/cover;filter:saturate(.85)}
+.hero .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1) 0,rgba(0,0,0,0) 40%,rgba(0,0,0,.6) 100%)}
+.hero .strand{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.hero h1{position:absolute;left:40px;bottom:44px;z-index:3;color:#fff;font-family:var(--min);font-weight:500;font-size:clamp(150px,26vw,420px);line-height:.85;letter-spacing:-.04em;margin-left:-.05em}
+.hero .lead{position:absolute;right:40px;bottom:56px;z-index:3;color:#fff;text-align:right;font-size:13px;letter-spacing:.14em;line-height:2.2}
+.hero .lead b{display:block;font-family:var(--min);font-weight:400;font-size:clamp(20px,2.2vw,28px);letter-spacing:.24em;margin-bottom:8px}
+.hero .side{position:absolute;right:40px;top:120px;z-index:3;color:#fff;font-size:12px}
+
+/* statement + leaf */
+.st{padding:clamp(120px,16vw,220px) 0;position:relative;overflow:hidden}
+.st .leaf{position:absolute;right:-6vw;top:50%;transform:translateY(-50%);width:min(52vw,640px);height:auto;z-index:0;opacity:.9}
+.st .leaf path{fill:none;stroke:var(--moss);stroke-width:.7;opacity:.35}
+.st .in{max-width:1200px}
+.st h2{font-family:var(--min);font-weight:400;font-size:clamp(34px,4.6vw,64px);letter-spacing:.14em;line-height:1.6;margin-bottom:44px}
+.st p{max-width:32em;color:#4E5048;margin-bottom:1.6em}
+.st .en{display:block;color:var(--wood);margin-top:26px;font-size:14px}
+
+/* before/after full-bleed */
+.ba{position:relative;height:clamp(360px,72vh,820px);overflow:hidden;user-select:none;background:var(--sage)}
+.ba .img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1554519934-e32b1629d9ee?auto=format&fit=crop&w=2400&q=80') center/cover}
+.ba .before{filter:saturate(.55) contrast(.92) brightness(.92)}
+.ba .after{filter:saturate(1.15) contrast(1.08) brightness(1.06);clip-path:inset(0 0 0 var(--x,50%))}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--x,50%);width:1px;background:#fff;transform:translateX(-.5px);z-index:2}
+.ba .handle::before{content:"";position:absolute;top:50%;left:50%;width:56px;height:56px;border:1px solid #fff;border-radius:50%;transform:translate(-50%,-50%);backdrop-filter:blur(6px)}
+.ba .handle::after{content:"◂   ▸";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:11px;white-space:nowrap}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:3}
+.ba .lb{position:absolute;top:40px;font-family:var(--min);font-size:clamp(18px,2.2vw,28px);letter-spacing:.3em;color:#fff;z-index:2;text-shadow:0 2px 16px rgba(0,0,0,.4)}
+.ba .lb.l{left:40px}.ba .lb.r{right:40px}
+.ba .cap{position:absolute;bottom:34px;left:40px;z-index:2;color:#fff;font-size:12px;letter-spacing:.14em;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+
+/* pillars: 大きな数字 */
+.pil{padding:clamp(120px,16vw,220px) 0}
+.pil h2{font-family:var(--min);font-weight:400;font-size:clamp(28px,3.4vw,44px);letter-spacing:.2em;margin-bottom:70px}
+.pil .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:60px}
+.pil .c i{display:block;font-family:var(--en);font-style:italic;font-size:clamp(60px,7vw,100px);line-height:1;color:var(--sage);margin-bottom:-18px;position:relative;z-index:0}
+.pil .c h3{position:relative;z-index:1;font-family:var(--min);font-weight:400;font-size:22px;letter-spacing:.16em;margin-bottom:14px;line-height:1.6}
+.pil .c h3 small{display:block;font-family:var(--en);font-style:italic;font-size:13px;color:var(--wood);letter-spacing:.14em;margin-bottom:6px}
+.pil .c p{font-size:13px;color:#4E5048}
+
+/* menu */
+.menu{background:var(--sage);padding:clamp(120px,16vw,220px) 0;position:relative;overflow:hidden}
+.menu .strand{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.7}
+.menu h2{font-family:var(--min);font-weight:400;font-size:clamp(40px,6vw,88px);letter-spacing:.06em;line-height:1;margin-bottom:60px}
+.menu .rows{max-width:860px}
+.row{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:baseline;padding:26px 0;border-top:1px solid rgba(46,47,42,.2)}
+.row:last-of-type{border-bottom:1px solid rgba(46,47,42,.2)}
+.row b{font-family:var(--min);font-weight:400;font-size:18px;letter-spacing:.16em;display:block}
+.row small{display:block;color:var(--mute);font-size:12px;letter-spacing:.06em;margin-top:4px}
+.row .y{font-family:var(--en);font-style:normal;font-weight:300;font-size:clamp(28px,3vw,40px);letter-spacing:.02em;white-space:nowrap}
+.row .y i{font-style:italic;font-size:14px;color:var(--wood);margin-left:14px}
+.row.rec b::after{content:"初回おすすめ";font-family:var(--jp);font-size:11px;letter-spacing:.2em;color:var(--wood);margin-left:14px;vertical-align:middle}
+.menu .note{margin-top:24px;font-size:12px;color:var(--mute);letter-spacing:.1em}
+
+/* process */
+.proc{padding:clamp(120px,16vw,220px) 0}
+.proc h2{font-family:var(--min);font-weight:400;font-size:clamp(28px,3.4vw,44px);letter-spacing:.2em;margin-bottom:60px}
+.proc .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line)}
+.proc .s{padding:30px 24px 30px 0;border-right:1px solid var(--line)}
+.proc .s + .s{padding-left:24px}
+.proc .s:last-child{border-right:0}
+.proc .s i{display:block;font-family:var(--en);font-style:italic;font-size:30px;color:var(--wood);line-height:1;margin-bottom:18px}
+.proc .s h3{font-family:var(--min);font-weight:400;font-size:16px;letter-spacing:.14em;margin-bottom:8px}
+.proc .s p{font-size:12px;color:var(--mute)}
+
+/* info */
+.info{padding:0 0 clamp(120px,16vw,220px);display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.info h3{font-family:var(--min);font-weight:400;font-size:22px;letter-spacing:.2em;margin-bottom:30px}
+.info dl{display:grid;grid-template-columns:7em 1fr;row-gap:12px}
+.info dt{color:var(--mute);letter-spacing:.14em}
+.info .ph{aspect-ratio:4/3;background:var(--sage)}
+
+/* reserve */
+.rsv{position:relative;background:var(--moss);color:var(--w);padding:clamp(140px,18vw,240px) 40px;text-align:center;overflow:hidden}
+.rsv .strand{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.5}
+.rsv h2{position:relative;z-index:1;font-family:var(--min);font-weight:400;font-size:clamp(32px,5vw,72px);letter-spacing:.14em;line-height:1.5;margin-bottom:40px}
+.rsv a{position:relative;z-index:1;display:inline-block;font-size:12px;letter-spacing:.4em;border:1px solid var(--w);padding:18px 48px;margin:0 8px 12px;transition:background .3s,color .3s}
+.rsv a:hover{background:var(--w);color:var(--moss)}
+.rsv .en{position:relative;z-index:1;display:block;color:#C4CFBB;margin-top:40px;font-size:13px}
+
+footer{padding:36px 40px;font-size:11px;color:var(--mute);letter-spacing:.2em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:2}
+
+@media (max-width:900px){
+  nav{padding:20px 22px}nav ul{display:none}
+  .in{padding:0 22px}
+  .hero h1{left:22px;font-size:clamp(150px,44vw,300px)}.hero .lead{right:22px;bottom:auto;top:120px;text-align:left;left:22px}.hero .side{display:none}
+  .st .leaf{right:-30vw;width:90vw;opacity:.5}
+  .ba .lb.l{left:22px}.ba .lb.r{right:22px}.ba .cap{left:22px}
+  .pil .cols{grid-template-columns:1fr;gap:40px}
+  .proc .grid{grid-template-columns:1fr}.proc .s{border-right:0;border-bottom:1px solid var(--line);padding:24px 0}.proc .s + .s{padding-left:0}
+  .info{grid-template-columns:1fr;gap:40px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">艶<i>tsuya</i></a>
+  <ul><li><a href="#proof">Before / After</a></li><li><a href="#menu">Menu</a></li><li><a href="#info">Access</a></li></ul>
+  <a href="#reserve" class="r">Reserve</a>
+</nav>
+
+<section class="hero">
+  <div class="ph"></div>
+  <svg class="strand" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".7"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+    <path d="M-100,560 C300,500 500,700 800,580 S1200,360 1540,460" fill="none" stroke="url(#g1)" stroke-width="1.2"/>
+    <path d="M-100,600 C300,540 520,740 820,620 S1220,400 1540,500" fill="none" stroke="url(#g1)" stroke-width=".8" opacity=".6"/>
+    <path d="M-100,520 C280,460 480,660 780,540 S1180,320 1540,420" fill="none" stroke="url(#g1)" stroke-width=".8" opacity=".4"/>
+  </svg>
+  <span class="side vt">ヘッドスパ・髪質改善 ｜ 栄</span>
+  <h1>艶</h1>
+  <div class="lead"><b>足さない。戻す。</b>カットもカラーもしません。<br>髪と頭皮を、元の状態に戻すことだけを。</div>
+</section>
+
+<section class="st">
+  <svg class="leaf" viewBox="0 0 400 600" aria-hidden="true">
+    <path d="M200,590 C200,380 120,260 60,120 C160,180 200,300 200,590 Z"/>
+    <path d="M200,590 C200,380 280,260 340,120 C240,180 200,300 200,590 Z"/>
+    <path d="M200,590 L200,20"/>
+    <path d="M200,420 C150,380 110,340 90,280 M200,340 C160,300 130,260 120,210 M200,260 C170,230 150,200 150,160"/>
+    <path d="M200,420 C250,380 290,340 310,280 M200,340 C240,300 270,260 280,210 M200,260 C230,230 250,200 250,160"/>
+  </svg>
+  <div class="in">
+    <h2>コーティングは、<br>洗えば落ちる。</h2>
+    <p>一時的にツヤを出すことはできます。でも、それは表面を固めているだけで、洗えば落ちます。艶がしているのは、髪の内側に水分と栄養を戻すことと、髪が生える土壌である頭皮を整えることです。</p>
+    <p>何かを足すのではなく、戻す。それが一番きれいに見える方法だからです。</p>
+    <span class="en">Head spa &amp; hair repair, Sakae Nagoya</span>
+  </div>
+</section>
+
+<div id="proof" class="ba" style="--x:50%">
+  <div class="img before"></div>
+  <div class="img after"></div>
+  <div class="handle"></div>
+  <span class="lb l">施術前</span><span class="lb r">施術後</span>
+  <span class="cap">髪質改善 1回目の直後。同じ日、同じ光。加工なし。</span>
+  <input type="range" min="0" max="100" value="50" aria-label="施術前後を比較">
+</div>
+
+<section class="in pil">
+  <h2>三つのこと</h2>
+  <div class="cols">
+    <div class="c"><i>01</i><h3><small>Scalp</small>頭皮から始める</h3><p>毛穴の詰まりと血流を診てから施術に入ります。髪は頭皮から生えます。土壌が悪いまま、いい髪は生えません。</p></div>
+    <div class="c"><i>02</i><h3><small>Inside</small>内側を補修する</h3><p>髪の内部が空洞になっているところに、水分と栄養を戻します。表面を固めるコーティングとは、持ちが違います。</p></div>
+    <div class="c"><i>03</i><h3><small>Time</small>時間をかける</h3><p>ヘッドスパは最短でも40分。急いで揉んでも意味がありません。眠ってしまう方が多いので、そのつもりで。</p></div>
+  </div>
+</section>
+
+<section id="menu" class="menu">
+  <svg class="strand" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#8D7048" stop-opacity="0"/><stop offset=".5" stop-color="#8D7048" stop-opacity=".5"/><stop offset="1" stop-color="#8D7048" stop-opacity="0"/></linearGradient></defs>
+    <path d="M-100,200 C300,140 500,340 800,220 S1200,0 1540,100" fill="none" stroke="url(#g2)" stroke-width="1"/>
+    <path d="M-100,760 C300,700 520,900 820,780 S1220,560 1540,660" fill="none" stroke="url(#g2)" stroke-width="1"/>
+  </svg>
+  <div class="in">
+    <h2>Menu</h2>
+    <div class="rows">
+      <div class="row rec"><div><b>体験コース</b><small>診断・ヘッドスパ40分・髪質改善1回・自宅ケアのご提案</small></div><span class="y">¥9,900<i>80 min</i></span></div>
+      <div class="row"><div><b>髪質改善 三回コース</b><small>4週間おきに3回。毎回ヘッドスパ付き。単発より¥6,600お得</small></div><span class="y">¥39,600</span></div>
+      <div class="row"><div><b>ヘッドスパ 四十分</b><small>頭皮クレンジング・マッサージ</small></div><span class="y">¥6,600</span></div>
+      <div class="row"><div><b>ヘッドスパ 六十分</b><small>肩・首のほぐしを追加</small></div><span class="y">¥9,350</span></div>
+      <div class="row"><div><b>髪質改善 単発</b><small>トリートメントのみ</small></div><span class="y">¥15,400</span></div>
+    </div>
+    <p class="note">税込。初めての方は体験コースから。どちらが合うかは、頭皮と髪を診てからご提案します。</p>
+  </div>
+</section>
+
+<section class="in proc">
+  <h2>体験コースの流れ</h2>
+  <div class="grid">
+    <div class="s"><i>01</i><h3>診断</h3><p>マイクロスコープで頭皮と髪を見ます。写真をお渡しします。</p></div>
+    <div class="s"><i>02</i><h3>クレンジング</h3><p>炭酸泉で毛穴の汚れを浮かせて落とします。</p></div>
+    <div class="s"><i>03</i><h3>ヘッドスパ</h3><p>40分。眠ってしまって構いません。</p></div>
+    <div class="s"><i>04</i><h3>補修</h3><p>髪の内側に水分と栄養を戻して、熱で定着させます。</p></div>
+    <div class="s"><i>05</i><h3>仕上げ</h3><p>乾かして、触って確かめてください。</p></div>
+  </div>
+</section>
+
+<section id="info" class="in info">
+  <div>
+    <h3>ご案内</h3>
+    <dl>
+      <dt>店名</dt><dd>艶 tsuya（つや）</dd>
+      <dt>住所</dt><dd>名古屋市中区栄3丁目 ○○ビル 5F</dd>
+      <dt>最寄駅</dt><dd>地下鉄 栄駅 8番出口から徒歩5分</dd>
+      <dt>営業時間</dt><dd>11:00–20:00（最終受付 18:30）</dd>
+      <dt>定休日</dt><dd>月曜・第2火曜</dd>
+      <dt>電話</dt><dd>052-000-0000</dd>
+    </dl>
+  </div>
+  <div class="ph" aria-label="地図"></div>
+</section>
+
+<section id="reserve" class="rsv">
+  <svg class="strand" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-100,560 C300,500 500,700 800,580 S1200,360 1540,460" fill="none" stroke="#fff" stroke-width="1" opacity=".5"/>
+    <path d="M-100,600 C300,540 520,740 820,620 S1220,400 1540,500" fill="none" stroke="#fff" stroke-width=".7" opacity=".35"/>
+  </svg>
+  <h2>まず、<br>触りに来てください。</h2>
+  <a href="#">Webで予約</a><a href="#">LINEで相談</a>
+  <span class="en">Trial course 80 min · ¥9,900</span>
+</section>
+
+<footer><span>© 艶 tsuya</span><span>Sakae, Nagoya</span></footer>
+
+<script>
+(function(){const b=document.querySelector('.ba'),r=b.querySelector('input');r.addEventListener('input',()=>b.style.setProperty('--x',r.value+'%'));})();
+</script>
+</body>
+</html>
